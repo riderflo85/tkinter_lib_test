@@ -14,5 +14,8 @@ label.pack()
 bouton = Button(fenetre, text="Fermer", command=fenetre.quit)
 bouton.pack()
 
+# Case à cocher / checkbutton
+check = Checkbutton(fenetre, text="Nouveau??")
+check.pack()
 
 fenetre.mainloop()
