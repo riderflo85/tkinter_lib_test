@@ -28,5 +28,13 @@ bouton1.pack()
 bouton2.pack()
 bouton3.pack()
 
+# Liste
+liste = Listbox(fenetre)
+liste.insert(1, "Python")
+liste.insert(2, "C++")
+liste.insert(3, "JavaScript")
+liste.insert(4, "HTML")
+liste.insert(5, "PHP")
+liste.pack()
 
 fenetre.mainloop()
