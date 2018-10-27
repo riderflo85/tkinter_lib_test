@@ -37,4 +37,11 @@ liste.insert(4, "HTML")
 liste.insert(5, "PHP")
 liste.pack()
 
+# Canvas / Toile, tableau de dessin
+canvas = Canvas(fenetre, width=150, height=128, background="green")
+ligne1 = canvas.create_line(75, 0, 75, 120)
+ligne2 = canvas.create_line(0, 60, 150, 60)
+txt = canvas.create_text(75, 60, text="Cible", font="Arial 16 italic", fill="red")
+canvas.pack()
+
 fenetre.mainloop()
