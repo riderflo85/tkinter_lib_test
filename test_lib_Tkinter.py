@@ -44,4 +44,10 @@ ligne2 = canvas.create_line(0, 60, 150, 60)
 txt = canvas.create_text(75, 60, text="Cible", font="Arial 16 italic", fill="red")
 canvas.pack()
 
+# Scale
+# Le widget scale permet de récupérer une valeur numérique via un scroll
+value2 = DoubleVar()
+scale = Scale(fenetre, variable=value2)
+scale.pack()
+
 fenetre.mainloop()
