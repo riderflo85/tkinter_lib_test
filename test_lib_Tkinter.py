@@ -6,7 +6,7 @@ from tkinter import *
 
 fenetre = Tk()
 
-# Label
+# Label (POUR LA COULEUR DU BACKGROUND (bg) LES CODES COULEUR HEX FONCRTIONNE AUSSI (ex:#88b4fc))
 label = Label(fenetre, text="Hello World !!!", bg="yellow")
 label.pack()
 
