@@ -26,10 +26,10 @@ label.pack()
 bouton = Button(fenetre, text="action", bg="#c45819", command=callback)
 bouton.pack()
 
-bouton2 = Button(fenetre, text="quit", command=fenetre.quit)
+bouton2 = Button(fenetre, text="quit", fg="#f91b1b", command=fenetre.quit)
 bouton2.pack()
 
-bouton3 = Button(fenetre, text="Lecture de fichiers", command=lectureDeFichiers)
+bouton3 = Button(fenetre, activebackground="#1fb201", activeforeground="#ffffff", text="Lecture de fichiers", underline=0, command=lectureDeFichiers)
 bouton3.pack()
 
 fenetre.mainloop()

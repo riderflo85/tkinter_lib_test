@@ -11,7 +11,7 @@ label = Label(fenetre, text="Hello World !!!", bg="yellow")
 label.pack()
 
 # Bouton de sortie -> POUR METTRE UNE ACTION SOUHAITER QUI N'EST PAS DANS LES FONCIONS DE BASE, UTILISER DES FUNCTIONS (def maFonction():)
-# Peut prendre d'autre parametre comme par exemple: bg=""
+# Peut prendre d'autre parametre comme par exemple: bg="" -> BackGround     fg="" -> ForeGround (couleur du text)
 bouton = Button(fenetre, text="Fermer", command=fenetre.quit)
 bouton.pack()
 
