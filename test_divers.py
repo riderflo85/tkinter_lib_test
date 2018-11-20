@@ -2,6 +2,7 @@
 
 import os
 from tkinter import *
+from tkinter.messagebox import *
 
 fenetre = Tk()
 
@@ -13,11 +14,14 @@ def lectureDeFichiers():
     data_file.close()
 
 def callback():
-    print("tu as click ;) ")
-    new_fenetre = Tk()
-    label2 = Label(new_fenetre, text="bien jouer", bg="#88b4fc")
-    label2.pack()
-    new_fenetre.mainloop()
+    showinfo("infos", "Bien ouéj")
+
+def alertMenu():
+    showinfo("alerte", "Bravo!")
+
+def lectureFichierMenu():
+    showinfo("Data", data_file.read())
+    data_file.close()
 
 
 label = Label(fenetre, text="Test de fonction", bg="#cdfc88")
@@ -32,4 +36,25 @@ bouton2.pack()
 bouton3 = Button(fenetre, activebackground="#1fb201", activeforeground="#ffffff", text="Lecture de fichiers", underline=0, command=lectureDeFichiers)
 bouton3.pack()
 
+menubar = Menu(fenetre)
+menu1 = Menu(menubar, tearoff=0)
+menu1.add_command(label="Créer", command=alertMenu)
+menu1.add_command(label="Editer", command=alertMenu)
+menu1.add_separator()
+menu1.add_command(label="Quitter", command=fenetre.quit)
+menubar.add_cascade(label="Fichier", menu=menu1)
+
+menu2 = Menu(menubar, tearoff=0)
+menu2.add_command(label="Couper", command=alertMenu)
+menu2.add_command(label="Copier", command=alertMenu)
+menu2.add_command(label="Coller", command=alertMenu)
+menubar.add_cascade(label="Editer", menu=menu2)
+
+menu3 = Menu(menubar, tearoff=0)
+menu3.add_command(label="A propos", command=lectureFichierMenu)
+menu3.add_command(label="Aide", command=alertMenu)
+menu3.add_command(label="Licence", command=alertMenu)
+menubar.add_cascade(label="Aide", menu=menu3)
+
+fenetre.config(menu=menubar)
 fenetre.mainloop()
