@@ -5,6 +5,8 @@ from tkinter import *
 from tkinter.messagebox import *
 
 fenetre = Tk()
+fenetre.geometry("300x200-1-1500")
+fenetre.title("Titre de test")
 
 data_file = open("/home/florent/Documents/Script_Réalisé/test_read_write.txt", "r")
 
